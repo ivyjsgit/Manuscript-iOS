@@ -15,6 +15,7 @@
 		CAC1F9AD252678AB00C2F54B /* Manuscript.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CAC1F9AB252678AB00C2F54B /* Manuscript.xcdatamodeld */; };
 		CAC1F9B8252678AB00C2F54B /* ManuscriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1F9B7252678AB00C2F54B /* ManuscriptTests.swift */; };
 		CAC1F9C3252678AB00C2F54B /* ManuscriptUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1F9C2252678AB00C2F54B /* ManuscriptUITests.swift */; };
+		CAC1F9D4252679B700C2F54B /* Second Training (No augmentation).mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CAC1F9D3252679B600C2F54B /* Second Training (No augmentation).mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CAC1F9BE252678AB00C2F54B /* ManuscriptUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManuscriptUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC1F9C2252678AB00C2F54B /* ManuscriptUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuscriptUITests.swift; sourceTree = "<group>"; };
 		CAC1F9C4252678AB00C2F54B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAC1F9D3252679B600C2F54B /* Second Training (No augmentation).mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Second Training (No augmentation).mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		CAC1F99F252678A900C2F54B /* Manuscript */ = {
 			isa = PBXGroup;
 			children = (
+				CAC1F9D3252679B600C2F54B /* Second Training (No augmentation).mlmodel */,
 				CAC1F9A0252678A900C2F54B /* ManuscriptApp.swift */,
 				CAC1F9A2252678A900C2F54B /* ContentView.swift */,
 				CAC1F9A4252678AB00C2F54B /* Assets.xcassets */,
@@ -269,6 +272,7 @@
 				CAC1F9AD252678AB00C2F54B /* Manuscript.xcdatamodeld in Sources */,
 				CAC1F9A3252678A900C2F54B /* ContentView.swift in Sources */,
 				CAC1F9A1252678A900C2F54B /* ManuscriptApp.swift in Sources */,
+				CAC1F9D4252679B700C2F54B /* Second Training (No augmentation).mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
