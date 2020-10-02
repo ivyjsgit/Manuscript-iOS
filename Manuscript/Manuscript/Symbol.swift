@@ -90,7 +90,6 @@ class Symbol{
         }
     }
     func symbolEnum()-> Image?{
-//        return Image("Symbols/2-4-time")
         switch self.symbolType{
             case .twelveeighttime:
                 return Image("Symbols/12-8-time")
@@ -116,50 +115,50 @@ class Symbol{
                 return Image("Symbols/Common-Time")
             case .cuttime:
                 return Image("Symbols/Cut-Time")
-//            case .dot:
-////                return SymbolEnum.dot
-//            case .doublesharp:
-////                return SymbolEnum.doublesharp
-//            case .eighthnote:
-////                return SymbolEnum.eighthnote
-//            case .eighthrest:
-////                return SymbolEnum.eighthrest
-//            case .fclef:
-////                return SymbolEnum.fclef
-//            case .flat:
-////                return SymbolEnum.flat
-//            case .gclef:
-////                return SymbolEnum.gclef
-//            case .halfnote:
-////                return SymbolEnum.halfnote
-//            case .natural:
-////                return SymbolEnum.natural
-//            case .quarternote:
-////                return SymbolEnum.quarternote
-//            case .quarterrest:
-////                return SymbolEnum.quarterrest
-//            case .sharp:
-////                return SymbolEnum.sharp
-//            case .sixteenthnote:
-////                return SymbolEnum.sixteenthnote
-//            case .sixteenthrest:
-////                return SymbolEnum.sixteenthrest
-//            case .sixtyfournote:
-////                return SymbolEnum.sixtyfournote
-//            case .sixtyfourrest:
-////                return SymbolEnum.sixtyfourrest
-//            case .thirtytwonote:
-////                return SymbolEnum.thirtytwonote
-//            case .thirtytworest:
-////                return SymbolEnum.thirtytworest
-//            case .wholehalfrest:
-////                return SymbolEnum.wholehalfrest
-//            case .wholenote:
-////                return SymbolEnum.wholenote
-//
+            case .dot:
+                return Image("Symbols/Dot")
+            case .doublesharp:
+                return Image("Symbols/Double-Sharp")
+            case .eighthnote:
+                return Image("Symbols/Eighth-Note")
+            case .eighthrest:
+                return Image("Symbols/Eighth-Rest")
+            case .fclef:
+                return Image("Symbols/F-Clef")
+            case .flat:
+                return Image("Symbols/Flat")
+            case .gclef:
+                return Image("Symbols/G-Clef")
+            case .halfnote:
+                return Image("Symbols/Half-Note")
+            case .natural:
+                return Image("Symbols/Natural")
+            case .quarternote:
+                return Image("Symbols/Quarter-Note")
+            case .quarterrest:
+                return Image("Symbols/Quarter-Rest")
+            case .sharp:
+                return Image("Symbols/Sharp")
+            case .sixteenthnote:
+                return Image("Symbols/Sixteenth-Note")
+            case .sixteenthrest:
+                return Image("Symbols/Sixteenth-Rest")
+            case .sixtyfournote:
+                return Image("Symbols/Sixty-Four-Note")
+            case .sixtyfourrest:
+                return Image("Symbols/Sixty-Four-Rest")
+            case .thirtytwonote:
+                return Image("Symbols/Thirty-Two-Note")
+            case .thirtytworest:
+                return Image("Symbols/Thirty-Two-Rest")
+            case .wholehalfrest:
+                return Image("Symbols/Whole-Half-Rest")
+            case .wholenote:
+                return Image("Symbols/Whole-Note")
             
+            //If all else fails, display a G-Clef
             default:
-                return nil
+                return Image("Symbols/G-Clef")
             }
 }
 }
