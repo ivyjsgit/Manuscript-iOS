@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class Symbol{
     var symbolType: SymbolEnum?
@@ -88,4 +89,77 @@ class Symbol{
             return nil
         }
     }
+    func symbolEnum()-> Image?{
+//        return Image("Symbols/2-4-time")
+        switch self.symbolType{
+            case .twelveeighttime:
+                return Image("Symbols/12-8-time")
+            case .twotwotime:
+                return Image("Symbols/2-2-time")
+            case .twofourtime:
+                return Image("Symbols/2-4-time")
+            case .threefourtime:
+                return Image("Symbols/3-4-time")
+            case .threeeighttime:
+                return Image("Symbols/3-8-time")
+            case .fourfourtime:
+                return Image("Symbols/4-4-time")
+            case .sixeighttime:
+                return Image("Symbols/6-8-time")
+            case .nineeighttime:
+                return Image("Symbols/9-8-time")
+            case .barline:
+                return Image("Symbols/Barline")
+            case .cclef:
+                return Image("Symbols/C-Clef")
+            case .commontime:
+                return Image("Symbols/Common-Time")
+            case .cuttime:
+                return Image("Symbols/Cut-Time")
+//            case .dot:
+////                return SymbolEnum.dot
+//            case .doublesharp:
+////                return SymbolEnum.doublesharp
+//            case .eighthnote:
+////                return SymbolEnum.eighthnote
+//            case .eighthrest:
+////                return SymbolEnum.eighthrest
+//            case .fclef:
+////                return SymbolEnum.fclef
+//            case .flat:
+////                return SymbolEnum.flat
+//            case .gclef:
+////                return SymbolEnum.gclef
+//            case .halfnote:
+////                return SymbolEnum.halfnote
+//            case .natural:
+////                return SymbolEnum.natural
+//            case .quarternote:
+////                return SymbolEnum.quarternote
+//            case .quarterrest:
+////                return SymbolEnum.quarterrest
+//            case .sharp:
+////                return SymbolEnum.sharp
+//            case .sixteenthnote:
+////                return SymbolEnum.sixteenthnote
+//            case .sixteenthrest:
+////                return SymbolEnum.sixteenthrest
+//            case .sixtyfournote:
+////                return SymbolEnum.sixtyfournote
+//            case .sixtyfourrest:
+////                return SymbolEnum.sixtyfourrest
+//            case .thirtytwonote:
+////                return SymbolEnum.thirtytwonote
+//            case .thirtytworest:
+////                return SymbolEnum.thirtytworest
+//            case .wholehalfrest:
+////                return SymbolEnum.wholehalfrest
+//            case .wholenote:
+////                return SymbolEnum.wholenote
+//
+            
+            default:
+                return nil
+            }
+}
 }

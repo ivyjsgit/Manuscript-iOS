@@ -5,6 +5,9 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            var symbol = Symbol(symbolType: "4-4-Time", symbolPositionOnStaff: "a")
+            var symbolImage = symbol.symbolEnum()
+            
             var staff1 = Group{
                 
                 Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
@@ -19,6 +22,7 @@ struct ContentView: View {
             var staff2 = Group{
                 Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
                 StaffLine().padding(.top, 130.0)
+                symbolImage
                 StaffLine().padding(.top, 30.0)
                 StaffLine().padding(.top, 30.0)
                 StaffLine().padding(.top, 30.0)
@@ -56,20 +60,20 @@ struct StaffLine: View {
             .edgesIgnoringSafeArea(.horizontal)
     }
 }
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
-
-
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        return Group {
-            ContentView().previewLayout(.fixed(width: 2436 / 3.0, height: 1125 / 3.0))
-        }
+        ContentView()
     }
 }
-#endif
+
+
+//#if DEBUG
+//struct ContentView_Previews : PreviewProvider {
+//    static var previews: some View {
+//        return Group {
+//            ContentView().previewLayout(.fixed(width: 2436 / 3.0, height: 1125 / 3.0))
+//        }
+//    }
+//}
+//#endif
 
