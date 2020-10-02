@@ -160,5 +160,5 @@ class Symbol{
             default:
                 return Image("Symbols/G-Clef")
             }
-}
+    }
 }
