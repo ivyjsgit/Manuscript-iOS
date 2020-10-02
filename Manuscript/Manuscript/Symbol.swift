@@ -89,7 +89,7 @@ class Symbol{
             return nil
         }
     }
-    func symbolEnum()-> Image?{
+    func getSymbolImage()-> Image?{
         switch self.symbolType{
             case .twelveeighttime:
                 return Image("Symbols/12-8-time")

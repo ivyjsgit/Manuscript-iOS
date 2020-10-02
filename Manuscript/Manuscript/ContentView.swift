@@ -7,16 +7,20 @@ struct ContentView: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var currentDrawing: Drawing = Drawing()
     @State private var drawings: [Drawing] = [Drawing]()
-    @State private var color: Color = Color.black
+    @State private var color: Color = .primary
     @State private var lineWidth: CGFloat = 3.0
     
     var body: some View {
         VStack {
-            var symbol = Symbol(symbolType: "4-4-Time", symbolPositionOnStaff: "a")
-            var symbolImage = symbol.symbolEnum()
+            let symbol = Symbol(symbolType: "4-4-Time", symbolPositionOnStaff: "a")
+            let symbolImage = symbol.getSymbolImage()
             
-            var staff1 = ZStack{
+            let staff1 = ZStack{
                 Text("Hello!")
+                DrawingPad(currentDrawing: $currentDrawing,
+                           drawings: $drawings,
+                           color: $color,
+                           lineWidth: $lineWidth)
                 VStack{
                     Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
                     StaffLine().padding(.top, 30.0)
@@ -28,11 +32,14 @@ struct ContentView: View {
                 }
             }
            
-            var staff2 = ZStack{
+            let staff2 = ZStack{
+                DrawingPad(currentDrawing: $currentDrawing,
+                           drawings: $drawings,
+                           color: $color,
+                           lineWidth: $lineWidth)
                 VStack{
                     Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
                     StaffLine().padding(.top, 130.0)
-    //                symbolImage
                     StaffLine().padding(.top, 30.0)
                     StaffLine().padding(.top, 30.0)
                     StaffLine().padding(.top, 30.0)
@@ -40,7 +47,11 @@ struct ContentView: View {
                     Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
                 }
             }
-            var staff3 = ZStack{
+            let staff3 = ZStack{
+                DrawingPad(currentDrawing: $currentDrawing,
+                           drawings: $drawings,
+                           color: $color,
+                           lineWidth: $lineWidth)
                VStack{
                     Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
                     StaffLine().padding(.top,130.0)
@@ -64,7 +75,8 @@ struct ContentView: View {
 }
 
 struct StaffLine: View {
-    let color: Color = .secondary
+    @Environment(\.colorScheme) var colorScheme
+    let color: Color = .primary
     let width: CGFloat = 2
     var body: some View {
         Rectangle()
@@ -72,6 +84,8 @@ struct StaffLine: View {
             .frame(height: width)
             .edgesIgnoringSafeArea(.horizontal)
     }
+ 
+    
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -95,7 +109,7 @@ struct DrawingPad: View {
                 self.add(drawing: self.currentDrawing, toPath: &path)
             }
             .stroke(self.color, lineWidth: self.lineWidth)
-                .background(Color(white: 0.95))
+                .background(Color(UIColor.systemBackground))
                 .gesture(
                     DragGesture(minimumDistance: 0.1)
                         .onChanged({ (value) in
@@ -108,7 +122,6 @@ struct DrawingPad: View {
                         .onEnded({ (value) in
                             self.drawings.append(self.currentDrawing)
                             self.currentDrawing = Drawing()
-                            print(drawings.last)
                         })
             )
         }
