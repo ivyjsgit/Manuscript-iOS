@@ -20,6 +20,22 @@
 		CAC271772526B3A300118302 /* Second Training (No augmentation).mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CAC271732526B3A300118302 /* Second Training (No augmentation).mlmodel */; };
 		CAC271782526B3A300118302 /* SymbolPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC271742526B3A300118302 /* SymbolPosition.swift */; };
 		CAC271792526B3A300118302 /* SymbolEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC271752526B3A300118302 /* SymbolEnum.swift */; };
+		CAC2718E2526C08600118302 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC2717E2526C08600118302 /* Icon-App-76x76@2x.png */; };
+		CAC2718F2526C08600118302 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC2717F2526C08600118302 /* Icon-App-29x29@1x.png */; };
+		CAC271902526C08600118302 /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC271802526C08600118302 /* Icon-App-40x40@1x.png */; };
+		CAC271912526C08600118302 /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC271812526C08600118302 /* Icon-App-20x20@1x.png */; };
+		CAC271922526C08600118302 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC271822526C08600118302 /* Icon-App-83.5x83.5@2x.png */; };
+		CAC271932526C08600118302 /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC271832526C08600118302 /* Icon-App-20x20@3x.png */; };
+		CAC271942526C08600118302 /* ItunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC271842526C08600118302 /* ItunesArtwork@2x.png */; };
+		CAC271952526C08600118302 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = CAC271852526C08600118302 /* Contents.json */; };
+		CAC271962526C08600118302 /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC271862526C08600118302 /* Icon-App-20x20@2x.png */; };
+		CAC271972526C08600118302 /* Icon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC271872526C08600118302 /* Icon-App-29x29@3x.png */; };
+		CAC271982526C08600118302 /* Icon-App-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC271882526C08600118302 /* Icon-App-40x40@2x.png */; };
+		CAC271992526C08600118302 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC271892526C08600118302 /* Icon-App-60x60@3x.png */; };
+		CAC2719A2526C08600118302 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC2718A2526C08600118302 /* Icon-App-60x60@2x.png */; };
+		CAC2719B2526C08600118302 /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC2718B2526C08600118302 /* Icon-App-76x76@1x.png */; };
+		CAC2719C2526C08600118302 /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC2718C2526C08600118302 /* Icon-App-40x40@3x.png */; };
+		CAC2719D2526C08600118302 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAC2718D2526C08600118302 /* Icon-App-29x29@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +75,22 @@
 		CAC271732526B3A300118302 /* Second Training (No augmentation).mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Second Training (No augmentation).mlmodel"; sourceTree = "<group>"; };
 		CAC271742526B3A300118302 /* SymbolPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolPosition.swift; sourceTree = "<group>"; };
 		CAC271752526B3A300118302 /* SymbolEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolEnum.swift; sourceTree = "<group>"; };
+		CAC2717E2526C08600118302 /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
+		CAC2717F2526C08600118302 /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
+		CAC271802526C08600118302 /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
+		CAC271812526C08600118302 /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
+		CAC271822526C08600118302 /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
+		CAC271832526C08600118302 /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
+		CAC271842526C08600118302 /* ItunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ItunesArtwork@2x.png"; sourceTree = "<group>"; };
+		CAC271852526C08600118302 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		CAC271862526C08600118302 /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
+		CAC271872526C08600118302 /* Icon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@3x.png"; sourceTree = "<group>"; };
+		CAC271882526C08600118302 /* Icon-App-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@2x.png"; sourceTree = "<group>"; };
+		CAC271892526C08600118302 /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
+		CAC2718A2526C08600118302 /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
+		CAC2718B2526C08600118302 /* Icon-App-76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@1x.png"; sourceTree = "<group>"; };
+		CAC2718C2526C08600118302 /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
+		CAC2718D2526C08600118302 /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +141,7 @@
 		CAC2713B2526B38000118302 /* Manuscript */ = {
 			isa = PBXGroup;
 			children = (
+				CAC2717D2526C08600118302 /* AppIcon.appiconset */,
 				CAC2713C2526B38000118302 /* AppDelegate.swift */,
 				CAC2713E2526B38000118302 /* SceneDelegate.swift */,
 				CAC271402526B38000118302 /* ViewController.swift */,
@@ -141,6 +174,29 @@
 				CAC271632526B38100118302 /* Info.plist */,
 			);
 			path = ManuscriptUITests;
+			sourceTree = "<group>";
+		};
+		CAC2717D2526C08600118302 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				CAC2717E2526C08600118302 /* Icon-App-76x76@2x.png */,
+				CAC2717F2526C08600118302 /* Icon-App-29x29@1x.png */,
+				CAC271802526C08600118302 /* Icon-App-40x40@1x.png */,
+				CAC271812526C08600118302 /* Icon-App-20x20@1x.png */,
+				CAC271822526C08600118302 /* Icon-App-83.5x83.5@2x.png */,
+				CAC271832526C08600118302 /* Icon-App-20x20@3x.png */,
+				CAC271842526C08600118302 /* ItunesArtwork@2x.png */,
+				CAC271852526C08600118302 /* Contents.json */,
+				CAC271862526C08600118302 /* Icon-App-20x20@2x.png */,
+				CAC271872526C08600118302 /* Icon-App-29x29@3x.png */,
+				CAC271882526C08600118302 /* Icon-App-40x40@2x.png */,
+				CAC271892526C08600118302 /* Icon-App-60x60@3x.png */,
+				CAC2718A2526C08600118302 /* Icon-App-60x60@2x.png */,
+				CAC2718B2526C08600118302 /* Icon-App-76x76@1x.png */,
+				CAC2718C2526C08600118302 /* Icon-App-40x40@3x.png */,
+				CAC2718D2526C08600118302 /* Icon-App-29x29@2x.png */,
+			);
+			path = AppIcon.appiconset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +302,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC271912526C08600118302 /* Icon-App-20x20@1x.png in Resources */,
+				CAC2718F2526C08600118302 /* Icon-App-29x29@1x.png in Resources */,
+				CAC2719D2526C08600118302 /* Icon-App-29x29@2x.png in Resources */,
+				CAC271962526C08600118302 /* Icon-App-20x20@2x.png in Resources */,
+				CAC2718E2526C08600118302 /* Icon-App-76x76@2x.png in Resources */,
 				CAC2714C2526B38000118302 /* LaunchScreen.storyboard in Resources */,
+				CAC271902526C08600118302 /* Icon-App-40x40@1x.png in Resources */,
+				CAC271992526C08600118302 /* Icon-App-60x60@3x.png in Resources */,
+				CAC2719B2526C08600118302 /* Icon-App-76x76@1x.png in Resources */,
+				CAC271932526C08600118302 /* Icon-App-20x20@3x.png in Resources */,
 				CAC271492526B38000118302 /* Assets.xcassets in Resources */,
+				CAC271922526C08600118302 /* Icon-App-83.5x83.5@2x.png in Resources */,
+				CAC2719A2526C08600118302 /* Icon-App-60x60@2x.png in Resources */,
 				CAC271442526B38000118302 /* Main.storyboard in Resources */,
+				CAC271982526C08600118302 /* Icon-App-40x40@2x.png in Resources */,
+				CAC271952526C08600118302 /* Contents.json in Resources */,
+				CAC2719C2526C08600118302 /* Icon-App-40x40@3x.png in Resources */,
+				CAC271942526C08600118302 /* ItunesArtwork@2x.png in Resources */,
+				CAC271972526C08600118302 /* Icon-App-29x29@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,7 +526,7 @@
 		CAC271672526B38100118302 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T227M9525C;
@@ -473,7 +545,7 @@
 		CAC271682526B38100118302 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T227M9525C;
