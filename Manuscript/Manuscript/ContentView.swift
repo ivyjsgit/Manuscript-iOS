@@ -1,80 +1,75 @@
-//
-//  ContentView.swift
-//  Manuscript
-//
-//  Created by Ivy on 10/2/20.
-//
-
 import SwiftUI
-import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
-        List {
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+        VStack {
+            var staff1 = Group{
+                
+                Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
+                StaffLine().padding(.top, 30.0)
+                StaffLine().padding(.top, 30.0)
+                StaffLine().padding(.top, 30.0)
+                StaffLine().padding(.top, 30.0)
+                StaffLine().padding(.top, 30.0)
+                Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
             }
-            .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
 
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
+            var staff2 = Group{
+                Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
+                StaffLine().padding(.top, 130.0)
+                StaffLine().padding(.top, 30.0)
+                StaffLine().padding(.top, 30.0)
+                StaffLine().padding(.top, 30.0)
+                StaffLine().padding(.top, 30.0)
+                Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
             }
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            var staff3 = Group{
+                Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
+                StaffLine().padding(.top,130.0)
+                StaffLine().padding(.top, 30.0)
+                StaffLine().padding(.top, 30.0)
+                StaffLine().padding(.top, 30.0)
+                StaffLine().padding(.top, 30.0)
+                Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
             }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+            staff1.gesture(DragGesture().onChanged({ value in print("Hello from Staff1 \(getBackgroundColor())")}))
+            staff2.gesture(DragGesture().onChanged({ value in print("Hello from Staff2 \(getBackgroundColor())")}))
+            staff3.gesture(DragGesture().onChanged({ value in print("Hello from Staff3 \(getBackgroundColor())")}))
         }
     }
+    
+    func getBackgroundColor() -> Color{
+        colorScheme == .dark ? .black : .white
+    }
+
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
+struct StaffLine: View {
+    let color: Color = .secondary
+    let width: CGFloat = 2
+    var body: some View {
+        Rectangle()
+            .fill(color)
+            .frame(height: width)
+            .edgesIgnoringSafeArea(.horizontal)
+    }
+}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
 
-struct ContentView_Previews: PreviewProvider {
+
+#if DEBUG
+struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        return Group {
+            ContentView().previewLayout(.fixed(width: 2436 / 3.0, height: 1125 / 3.0))
+        }
     }
 }
+#endif
+

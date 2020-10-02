@@ -15,6 +15,10 @@
 		CA4C28D525275B0B00A9FEBA /* Manuscript.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA4C28D325275B0B00A9FEBA /* Manuscript.xcdatamodeld */; };
 		CA4C28E025275B0B00A9FEBA /* ManuscriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C28DF25275B0B00A9FEBA /* ManuscriptTests.swift */; };
 		CA4C28EB25275B0B00A9FEBA /* ManuscriptUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C28EA25275B0B00A9FEBA /* ManuscriptUITests.swift */; };
+		CA4C28FE25275C1D00A9FEBA /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C28FB25275C1C00A9FEBA /* Symbol.swift */; };
+		CA4C28FF25275C1D00A9FEBA /* SymbolPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C28FC25275C1C00A9FEBA /* SymbolPosition.swift */; };
+		CA4C290025275C1D00A9FEBA /* Second Training (No augmentation).mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CA4C28FD25275C1D00A9FEBA /* Second Training (No augmentation).mlmodel */; };
+		CA4C290525275C3D00A9FEBA /* SymbolEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C290425275C3D00A9FEBA /* SymbolEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		CA4C28E625275B0B00A9FEBA /* ManuscriptUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManuscriptUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4C28EA25275B0B00A9FEBA /* ManuscriptUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuscriptUITests.swift; sourceTree = "<group>"; };
 		CA4C28EC25275B0B00A9FEBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA4C28FB25275C1C00A9FEBA /* Symbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		CA4C28FC25275C1C00A9FEBA /* SymbolPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolPosition.swift; sourceTree = "<group>"; };
+		CA4C28FD25275C1D00A9FEBA /* Second Training (No augmentation).mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Second Training (No augmentation).mlmodel"; sourceTree = "<group>"; };
+		CA4C290425275C3D00A9FEBA /* SymbolEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,10 @@
 				CA4C28D125275B0B00A9FEBA /* Persistence.swift */,
 				CA4C28D625275B0B00A9FEBA /* Info.plist */,
 				CA4C28D325275B0B00A9FEBA /* Manuscript.xcdatamodeld */,
+				CA4C28FD25275C1D00A9FEBA /* Second Training (No augmentation).mlmodel */,
+				CA4C28FB25275C1C00A9FEBA /* Symbol.swift */,
+				CA4C290425275C3D00A9FEBA /* SymbolEnum.swift */,
+				CA4C28FC25275C1C00A9FEBA /* SymbolPosition.swift */,
 				CA4C28CE25275B0B00A9FEBA /* Preview Content */,
 			);
 			path = Manuscript;
@@ -266,8 +278,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA4C28D225275B0B00A9FEBA /* Persistence.swift in Sources */,
+				CA4C290025275C1D00A9FEBA /* Second Training (No augmentation).mlmodel in Sources */,
+				CA4C28FE25275C1D00A9FEBA /* Symbol.swift in Sources */,
 				CA4C28D525275B0B00A9FEBA /* Manuscript.xcdatamodeld in Sources */,
 				CA4C28CB25275B0900A9FEBA /* ContentView.swift in Sources */,
+				CA4C28FF25275C1D00A9FEBA /* SymbolPosition.swift in Sources */,
+				CA4C290525275C3D00A9FEBA /* SymbolEnum.swift in Sources */,
 				CA4C28C925275B0900A9FEBA /* ManuscriptApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
