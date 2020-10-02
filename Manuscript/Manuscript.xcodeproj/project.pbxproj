@@ -7,76 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CAFBDEDA2526A172002C7023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFBDED92526A172002C7023 /* AppDelegate.swift */; };
-		CAFBDEDC2526A172002C7023 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFBDEDB2526A172002C7023 /* SceneDelegate.swift */; };
-		CAFBDEDE2526A172002C7023 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFBDEDD2526A172002C7023 /* ViewController.swift */; };
-		CAFBDEE12526A172002C7023 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFBDEDF2526A172002C7023 /* Main.storyboard */; };
-		CAFBDEE42526A172002C7023 /* Manuscript.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CAFBDEE22526A172002C7023 /* Manuscript.xcdatamodeld */; };
-		CAFBDEE62526A173002C7023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAFBDEE52526A173002C7023 /* Assets.xcassets */; };
-		CAFBDEE92526A173002C7023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAFBDEE72526A173002C7023 /* LaunchScreen.storyboard */; };
-		CAFBDEF42526A173002C7023 /* ManuscriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFBDEF32526A173002C7023 /* ManuscriptTests.swift */; };
-		CAFBDEFF2526A173002C7023 /* ManuscriptUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFBDEFE2526A173002C7023 /* ManuscriptUITests.swift */; };
-		CAFBDF132526A1B1002C7023 /* SymbolPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFBDF0F2526A1B1002C7023 /* SymbolPosition.swift */; };
-		CAFBDF142526A1B1002C7023 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFBDF102526A1B1002C7023 /* Symbol.swift */; };
-		CAFBDF152526A1B1002C7023 /* SymbolEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFBDF112526A1B1002C7023 /* SymbolEnum.swift */; };
-		CAFBDF162526A1B1002C7023 /* Second Training (No augmentation).mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CAFBDF122526A1B1002C7023 /* Second Training (No augmentation).mlmodel */; };
+		CAC2713D2526B38000118302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2713C2526B38000118302 /* AppDelegate.swift */; };
+		CAC2713F2526B38000118302 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2713E2526B38000118302 /* SceneDelegate.swift */; };
+		CAC271412526B38000118302 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC271402526B38000118302 /* ViewController.swift */; };
+		CAC271442526B38000118302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC271422526B38000118302 /* Main.storyboard */; };
+		CAC271472526B38000118302 /* Manuscript.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CAC271452526B38000118302 /* Manuscript.xcdatamodeld */; };
+		CAC271492526B38000118302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC271482526B38000118302 /* Assets.xcassets */; };
+		CAC2714C2526B38000118302 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC2714A2526B38000118302 /* LaunchScreen.storyboard */; };
+		CAC271572526B38000118302 /* ManuscriptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC271562526B38000118302 /* ManuscriptTests.swift */; };
+		CAC271622526B38100118302 /* ManuscriptUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC271612526B38100118302 /* ManuscriptUITests.swift */; };
+		CAC271762526B3A300118302 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC271722526B3A300118302 /* Symbol.swift */; };
+		CAC271772526B3A300118302 /* Second Training (No augmentation).mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CAC271732526B3A300118302 /* Second Training (No augmentation).mlmodel */; };
+		CAC271782526B3A300118302 /* SymbolPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC271742526B3A300118302 /* SymbolPosition.swift */; };
+		CAC271792526B3A300118302 /* SymbolEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC271752526B3A300118302 /* SymbolEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CAFBDEF02526A173002C7023 /* PBXContainerItemProxy */ = {
+		CAC271532526B38000118302 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CAFBDECE2526A172002C7023 /* Project object */;
+			containerPortal = CAC271312526B38000118302 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CAFBDED52526A172002C7023;
+			remoteGlobalIDString = CAC271382526B38000118302;
 			remoteInfo = Manuscript;
 		};
-		CAFBDEFB2526A173002C7023 /* PBXContainerItemProxy */ = {
+		CAC2715E2526B38100118302 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CAFBDECE2526A172002C7023 /* Project object */;
+			containerPortal = CAC271312526B38000118302 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CAFBDED52526A172002C7023;
+			remoteGlobalIDString = CAC271382526B38000118302;
 			remoteInfo = Manuscript;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CAFBDED62526A172002C7023 /* Manuscript.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manuscript.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAFBDED92526A172002C7023 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAFBDEDB2526A172002C7023 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CAFBDEDD2526A172002C7023 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CAFBDEE02526A172002C7023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CAFBDEE32526A172002C7023 /* Manuscript.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Manuscript.xcdatamodel; sourceTree = "<group>"; };
-		CAFBDEE52526A173002C7023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CAFBDEE82526A173002C7023 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CAFBDEEA2526A173002C7023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAFBDEEF2526A173002C7023 /* ManuscriptTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManuscriptTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAFBDEF32526A173002C7023 /* ManuscriptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuscriptTests.swift; sourceTree = "<group>"; };
-		CAFBDEF52526A173002C7023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAFBDEFA2526A173002C7023 /* ManuscriptUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManuscriptUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAFBDEFE2526A173002C7023 /* ManuscriptUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuscriptUITests.swift; sourceTree = "<group>"; };
-		CAFBDF002526A173002C7023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAFBDF0F2526A1B1002C7023 /* SymbolPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolPosition.swift; sourceTree = "<group>"; };
-		CAFBDF102526A1B1002C7023 /* Symbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
-		CAFBDF112526A1B1002C7023 /* SymbolEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolEnum.swift; sourceTree = "<group>"; };
-		CAFBDF122526A1B1002C7023 /* Second Training (No augmentation).mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Second Training (No augmentation).mlmodel"; sourceTree = "<group>"; };
+		CAC271392526B38000118302 /* Manuscript.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manuscript.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAC2713C2526B38000118302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CAC2713E2526B38000118302 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CAC271402526B38000118302 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CAC271432526B38000118302 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAC271462526B38000118302 /* Manuscript.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Manuscript.xcdatamodel; sourceTree = "<group>"; };
+		CAC271482526B38000118302 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CAC2714B2526B38000118302 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CAC2714D2526B38000118302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAC271522526B38000118302 /* ManuscriptTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManuscriptTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAC271562526B38000118302 /* ManuscriptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuscriptTests.swift; sourceTree = "<group>"; };
+		CAC271582526B38000118302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAC2715D2526B38100118302 /* ManuscriptUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManuscriptUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAC271612526B38100118302 /* ManuscriptUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuscriptUITests.swift; sourceTree = "<group>"; };
+		CAC271632526B38100118302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAC271722526B3A300118302 /* Symbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		CAC271732526B3A300118302 /* Second Training (No augmentation).mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Second Training (No augmentation).mlmodel"; sourceTree = "<group>"; };
+		CAC271742526B3A300118302 /* SymbolPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolPosition.swift; sourceTree = "<group>"; };
+		CAC271752526B3A300118302 /* SymbolEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CAFBDED32526A172002C7023 /* Frameworks */ = {
+		CAC271362526B38000118302 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CAFBDEEC2526A173002C7023 /* Frameworks */ = {
+		CAC2714F2526B38000118302 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CAFBDEF72526A173002C7023 /* Frameworks */ = {
+		CAC2715A2526B38100118302 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -86,59 +86,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CAFBDECD2526A172002C7023 = {
+		CAC271302526B38000118302 = {
 			isa = PBXGroup;
 			children = (
-				CAFBDED82526A172002C7023 /* Manuscript */,
-				CAFBDEF22526A173002C7023 /* ManuscriptTests */,
-				CAFBDEFD2526A173002C7023 /* ManuscriptUITests */,
-				CAFBDED72526A172002C7023 /* Products */,
+				CAC2713B2526B38000118302 /* Manuscript */,
+				CAC271552526B38000118302 /* ManuscriptTests */,
+				CAC271602526B38100118302 /* ManuscriptUITests */,
+				CAC2713A2526B38000118302 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CAFBDED72526A172002C7023 /* Products */ = {
+		CAC2713A2526B38000118302 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CAFBDED62526A172002C7023 /* Manuscript.app */,
-				CAFBDEEF2526A173002C7023 /* ManuscriptTests.xctest */,
-				CAFBDEFA2526A173002C7023 /* ManuscriptUITests.xctest */,
+				CAC271392526B38000118302 /* Manuscript.app */,
+				CAC271522526B38000118302 /* ManuscriptTests.xctest */,
+				CAC2715D2526B38100118302 /* ManuscriptUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CAFBDED82526A172002C7023 /* Manuscript */ = {
+		CAC2713B2526B38000118302 /* Manuscript */ = {
 			isa = PBXGroup;
 			children = (
-				CAFBDED92526A172002C7023 /* AppDelegate.swift */,
-				CAFBDEDB2526A172002C7023 /* SceneDelegate.swift */,
-				CAFBDEDD2526A172002C7023 /* ViewController.swift */,
-				CAFBDEDF2526A172002C7023 /* Main.storyboard */,
-				CAFBDEE52526A173002C7023 /* Assets.xcassets */,
-				CAFBDEE72526A173002C7023 /* LaunchScreen.storyboard */,
-				CAFBDEEA2526A173002C7023 /* Info.plist */,
-				CAFBDEE22526A172002C7023 /* Manuscript.xcdatamodeld */,
-				CAFBDF122526A1B1002C7023 /* Second Training (No augmentation).mlmodel */,
-				CAFBDF102526A1B1002C7023 /* Symbol.swift */,
-				CAFBDF112526A1B1002C7023 /* SymbolEnum.swift */,
-				CAFBDF0F2526A1B1002C7023 /* SymbolPosition.swift */,
+				CAC2713C2526B38000118302 /* AppDelegate.swift */,
+				CAC2713E2526B38000118302 /* SceneDelegate.swift */,
+				CAC271402526B38000118302 /* ViewController.swift */,
+				CAC271422526B38000118302 /* Main.storyboard */,
+				CAC271482526B38000118302 /* Assets.xcassets */,
+				CAC2714A2526B38000118302 /* LaunchScreen.storyboard */,
+				CAC2714D2526B38000118302 /* Info.plist */,
+				CAC271452526B38000118302 /* Manuscript.xcdatamodeld */,
+				CAC271732526B3A300118302 /* Second Training (No augmentation).mlmodel */,
+				CAC271722526B3A300118302 /* Symbol.swift */,
+				CAC271752526B3A300118302 /* SymbolEnum.swift */,
+				CAC271742526B3A300118302 /* SymbolPosition.swift */,
 			);
 			path = Manuscript;
 			sourceTree = "<group>";
 		};
-		CAFBDEF22526A173002C7023 /* ManuscriptTests */ = {
+		CAC271552526B38000118302 /* ManuscriptTests */ = {
 			isa = PBXGroup;
 			children = (
-				CAFBDEF32526A173002C7023 /* ManuscriptTests.swift */,
-				CAFBDEF52526A173002C7023 /* Info.plist */,
+				CAC271562526B38000118302 /* ManuscriptTests.swift */,
+				CAC271582526B38000118302 /* Info.plist */,
 			);
 			path = ManuscriptTests;
 			sourceTree = "<group>";
 		};
-		CAFBDEFD2526A173002C7023 /* ManuscriptUITests */ = {
+		CAC271602526B38100118302 /* ManuscriptUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CAFBDEFE2526A173002C7023 /* ManuscriptUITests.swift */,
-				CAFBDF002526A173002C7023 /* Info.plist */,
+				CAC271612526B38100118302 /* ManuscriptUITests.swift */,
+				CAC271632526B38100118302 /* Info.plist */,
 			);
 			path = ManuscriptUITests;
 			sourceTree = "<group>";
@@ -146,13 +146,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CAFBDED52526A172002C7023 /* Manuscript */ = {
+		CAC271382526B38000118302 /* Manuscript */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CAFBDF032526A173002C7023 /* Build configuration list for PBXNativeTarget "Manuscript" */;
+			buildConfigurationList = CAC271662526B38100118302 /* Build configuration list for PBXNativeTarget "Manuscript" */;
 			buildPhases = (
-				CAFBDED22526A172002C7023 /* Sources */,
-				CAFBDED32526A172002C7023 /* Frameworks */,
-				CAFBDED42526A172002C7023 /* Resources */,
+				CAC271352526B38000118302 /* Sources */,
+				CAC271362526B38000118302 /* Frameworks */,
+				CAC271372526B38000118302 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -160,68 +160,68 @@
 			);
 			name = Manuscript;
 			productName = Manuscript;
-			productReference = CAFBDED62526A172002C7023 /* Manuscript.app */;
+			productReference = CAC271392526B38000118302 /* Manuscript.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CAFBDEEE2526A173002C7023 /* ManuscriptTests */ = {
+		CAC271512526B38000118302 /* ManuscriptTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CAFBDF062526A173002C7023 /* Build configuration list for PBXNativeTarget "ManuscriptTests" */;
+			buildConfigurationList = CAC271692526B38100118302 /* Build configuration list for PBXNativeTarget "ManuscriptTests" */;
 			buildPhases = (
-				CAFBDEEB2526A173002C7023 /* Sources */,
-				CAFBDEEC2526A173002C7023 /* Frameworks */,
-				CAFBDEED2526A173002C7023 /* Resources */,
+				CAC2714E2526B38000118302 /* Sources */,
+				CAC2714F2526B38000118302 /* Frameworks */,
+				CAC271502526B38000118302 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CAFBDEF12526A173002C7023 /* PBXTargetDependency */,
+				CAC271542526B38000118302 /* PBXTargetDependency */,
 			);
 			name = ManuscriptTests;
 			productName = ManuscriptTests;
-			productReference = CAFBDEEF2526A173002C7023 /* ManuscriptTests.xctest */;
+			productReference = CAC271522526B38000118302 /* ManuscriptTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CAFBDEF92526A173002C7023 /* ManuscriptUITests */ = {
+		CAC2715C2526B38100118302 /* ManuscriptUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CAFBDF092526A173002C7023 /* Build configuration list for PBXNativeTarget "ManuscriptUITests" */;
+			buildConfigurationList = CAC2716C2526B38100118302 /* Build configuration list for PBXNativeTarget "ManuscriptUITests" */;
 			buildPhases = (
-				CAFBDEF62526A173002C7023 /* Sources */,
-				CAFBDEF72526A173002C7023 /* Frameworks */,
-				CAFBDEF82526A173002C7023 /* Resources */,
+				CAC271592526B38100118302 /* Sources */,
+				CAC2715A2526B38100118302 /* Frameworks */,
+				CAC2715B2526B38100118302 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CAFBDEFC2526A173002C7023 /* PBXTargetDependency */,
+				CAC2715F2526B38100118302 /* PBXTargetDependency */,
 			);
 			name = ManuscriptUITests;
 			productName = ManuscriptUITests;
-			productReference = CAFBDEFA2526A173002C7023 /* ManuscriptUITests.xctest */;
+			productReference = CAC2715D2526B38100118302 /* ManuscriptUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CAFBDECE2526A172002C7023 /* Project object */ = {
+		CAC271312526B38000118302 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					CAFBDED52526A172002C7023 = {
+					CAC271382526B38000118302 = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
-					CAFBDEEE2526A173002C7023 = {
+					CAC271512526B38000118302 = {
 						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = CAFBDED52526A172002C7023;
+						TestTargetID = CAC271382526B38000118302;
 					};
-					CAFBDEF92526A173002C7023 = {
+					CAC2715C2526B38100118302 = {
 						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = CAFBDED52526A172002C7023;
+						TestTargetID = CAC271382526B38000118302;
 					};
 				};
 			};
-			buildConfigurationList = CAFBDED12526A172002C7023 /* Build configuration list for PBXProject "Manuscript" */;
+			buildConfigurationList = CAC271342526B38000118302 /* Build configuration list for PBXProject "Manuscript" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -229,37 +229,37 @@
 				en,
 				Base,
 			);
-			mainGroup = CAFBDECD2526A172002C7023;
-			productRefGroup = CAFBDED72526A172002C7023 /* Products */;
+			mainGroup = CAC271302526B38000118302;
+			productRefGroup = CAC2713A2526B38000118302 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CAFBDED52526A172002C7023 /* Manuscript */,
-				CAFBDEEE2526A173002C7023 /* ManuscriptTests */,
-				CAFBDEF92526A173002C7023 /* ManuscriptUITests */,
+				CAC271382526B38000118302 /* Manuscript */,
+				CAC271512526B38000118302 /* ManuscriptTests */,
+				CAC2715C2526B38100118302 /* ManuscriptUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CAFBDED42526A172002C7023 /* Resources */ = {
+		CAC271372526B38000118302 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAFBDEE92526A173002C7023 /* LaunchScreen.storyboard in Resources */,
-				CAFBDEE62526A173002C7023 /* Assets.xcassets in Resources */,
-				CAFBDEE12526A172002C7023 /* Main.storyboard in Resources */,
+				CAC2714C2526B38000118302 /* LaunchScreen.storyboard in Resources */,
+				CAC271492526B38000118302 /* Assets.xcassets in Resources */,
+				CAC271442526B38000118302 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CAFBDEED2526A173002C7023 /* Resources */ = {
+		CAC271502526B38000118302 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CAFBDEF82526A173002C7023 /* Resources */ = {
+		CAC2715B2526B38100118302 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -269,65 +269,65 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CAFBDED22526A172002C7023 /* Sources */ = {
+		CAC271352526B38000118302 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAFBDEDE2526A172002C7023 /* ViewController.swift in Sources */,
-				CAFBDEE42526A172002C7023 /* Manuscript.xcdatamodeld in Sources */,
-				CAFBDF152526A1B1002C7023 /* SymbolEnum.swift in Sources */,
-				CAFBDF162526A1B1002C7023 /* Second Training (No augmentation).mlmodel in Sources */,
-				CAFBDEDA2526A172002C7023 /* AppDelegate.swift in Sources */,
-				CAFBDEDC2526A172002C7023 /* SceneDelegate.swift in Sources */,
-				CAFBDF132526A1B1002C7023 /* SymbolPosition.swift in Sources */,
-				CAFBDF142526A1B1002C7023 /* Symbol.swift in Sources */,
+				CAC271412526B38000118302 /* ViewController.swift in Sources */,
+				CAC271762526B3A300118302 /* Symbol.swift in Sources */,
+				CAC271472526B38000118302 /* Manuscript.xcdatamodeld in Sources */,
+				CAC271772526B3A300118302 /* Second Training (No augmentation).mlmodel in Sources */,
+				CAC2713D2526B38000118302 /* AppDelegate.swift in Sources */,
+				CAC2713F2526B38000118302 /* SceneDelegate.swift in Sources */,
+				CAC271792526B3A300118302 /* SymbolEnum.swift in Sources */,
+				CAC271782526B3A300118302 /* SymbolPosition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CAFBDEEB2526A173002C7023 /* Sources */ = {
+		CAC2714E2526B38000118302 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAFBDEF42526A173002C7023 /* ManuscriptTests.swift in Sources */,
+				CAC271572526B38000118302 /* ManuscriptTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CAFBDEF62526A173002C7023 /* Sources */ = {
+		CAC271592526B38100118302 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAFBDEFF2526A173002C7023 /* ManuscriptUITests.swift in Sources */,
+				CAC271622526B38100118302 /* ManuscriptUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CAFBDEF12526A173002C7023 /* PBXTargetDependency */ = {
+		CAC271542526B38000118302 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CAFBDED52526A172002C7023 /* Manuscript */;
-			targetProxy = CAFBDEF02526A173002C7023 /* PBXContainerItemProxy */;
+			target = CAC271382526B38000118302 /* Manuscript */;
+			targetProxy = CAC271532526B38000118302 /* PBXContainerItemProxy */;
 		};
-		CAFBDEFC2526A173002C7023 /* PBXTargetDependency */ = {
+		CAC2715F2526B38100118302 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CAFBDED52526A172002C7023 /* Manuscript */;
-			targetProxy = CAFBDEFB2526A173002C7023 /* PBXContainerItemProxy */;
+			target = CAC271382526B38000118302 /* Manuscript */;
+			targetProxy = CAC2715E2526B38100118302 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CAFBDEDF2526A172002C7023 /* Main.storyboard */ = {
+		CAC271422526B38000118302 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CAFBDEE02526A172002C7023 /* Base */,
+				CAC271432526B38000118302 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CAFBDEE72526A173002C7023 /* LaunchScreen.storyboard */ = {
+		CAC2714A2526B38000118302 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CAFBDEE82526A173002C7023 /* Base */,
+				CAC2714B2526B38000118302 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -335,7 +335,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CAFBDF012526A173002C7023 /* Debug */ = {
+		CAC271642526B38100118302 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -396,7 +396,7 @@
 			};
 			name = Debug;
 		};
-		CAFBDF022526A173002C7023 /* Release */ = {
+		CAC271652526B38100118302 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -451,7 +451,7 @@
 			};
 			name = Release;
 		};
-		CAFBDF042526A173002C7023 /* Debug */ = {
+		CAC271672526B38100118302 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -470,7 +470,7 @@
 			};
 			name = Debug;
 		};
-		CAFBDF052526A173002C7023 /* Release */ = {
+		CAC271682526B38100118302 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -489,7 +489,7 @@
 			};
 			name = Release;
 		};
-		CAFBDF072526A173002C7023 /* Debug */ = {
+		CAC2716A2526B38100118302 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -511,7 +511,7 @@
 			};
 			name = Debug;
 		};
-		CAFBDF082526A173002C7023 /* Release */ = {
+		CAC2716B2526B38100118302 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -533,7 +533,7 @@
 			};
 			name = Release;
 		};
-		CAFBDF0A2526A173002C7023 /* Debug */ = {
+		CAC2716D2526B38100118302 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -553,7 +553,7 @@
 			};
 			name = Debug;
 		};
-		CAFBDF0B2526A173002C7023 /* Release */ = {
+		CAC2716E2526B38100118302 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -576,38 +576,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CAFBDED12526A172002C7023 /* Build configuration list for PBXProject "Manuscript" */ = {
+		CAC271342526B38000118302 /* Build configuration list for PBXProject "Manuscript" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CAFBDF012526A173002C7023 /* Debug */,
-				CAFBDF022526A173002C7023 /* Release */,
+				CAC271642526B38100118302 /* Debug */,
+				CAC271652526B38100118302 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CAFBDF032526A173002C7023 /* Build configuration list for PBXNativeTarget "Manuscript" */ = {
+		CAC271662526B38100118302 /* Build configuration list for PBXNativeTarget "Manuscript" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CAFBDF042526A173002C7023 /* Debug */,
-				CAFBDF052526A173002C7023 /* Release */,
+				CAC271672526B38100118302 /* Debug */,
+				CAC271682526B38100118302 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CAFBDF062526A173002C7023 /* Build configuration list for PBXNativeTarget "ManuscriptTests" */ = {
+		CAC271692526B38100118302 /* Build configuration list for PBXNativeTarget "ManuscriptTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CAFBDF072526A173002C7023 /* Debug */,
-				CAFBDF082526A173002C7023 /* Release */,
+				CAC2716A2526B38100118302 /* Debug */,
+				CAC2716B2526B38100118302 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CAFBDF092526A173002C7023 /* Build configuration list for PBXNativeTarget "ManuscriptUITests" */ = {
+		CAC2716C2526B38100118302 /* Build configuration list for PBXNativeTarget "ManuscriptUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CAFBDF0A2526A173002C7023 /* Debug */,
-				CAFBDF0B2526A173002C7023 /* Release */,
+				CAC2716D2526B38100118302 /* Debug */,
+				CAC2716E2526B38100118302 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -615,17 +615,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CAFBDEE22526A172002C7023 /* Manuscript.xcdatamodeld */ = {
+		CAC271452526B38000118302 /* Manuscript.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CAFBDEE32526A172002C7023 /* Manuscript.xcdatamodel */,
+				CAC271462526B38000118302 /* Manuscript.xcdatamodel */,
 			);
-			currentVersion = CAFBDEE32526A172002C7023 /* Manuscript.xcdatamodel */;
+			currentVersion = CAC271462526B38000118302 /* Manuscript.xcdatamodel */;
 			path = Manuscript.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = CAFBDECE2526A172002C7023 /* Project object */;
+	rootObject = CAC271312526B38000118302 /* Project object */;
 }
