@@ -90,11 +90,13 @@ struct StaffLine: View {
  
     
 }
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .previewDevice("iPad Pro (12.9-inch) (4th generation)")
+    }
+}
 
 //https://stackoverflow.com/a/64177005/14082090
 struct DrawingPad: View {
@@ -144,16 +146,3 @@ struct DrawingPad: View {
     }
     
 }
-
-
-
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        return Group {
-            ContentView().previewLayout(.fixed(width: 2436 / 3.0, height: 1125 / 3.0))
-        }
-    }
-}
-#endif
-
