@@ -19,6 +19,12 @@
 		CA4C28FF25275C1D00A9FEBA /* SymbolPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C28FC25275C1C00A9FEBA /* SymbolPosition.swift */; };
 		CA4C290025275C1D00A9FEBA /* Second Training (No augmentation).mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CA4C28FD25275C1D00A9FEBA /* Second Training (No augmentation).mlmodel */; };
 		CA4C290525275C3D00A9FEBA /* SymbolEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C290425275C3D00A9FEBA /* SymbolEnum.swift */; };
+		CAA6407F252A3B910001E6BF /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA6407E252A3B910001E6BF /* Staff.swift */; };
+		CAA64091252A3C760001E6BF /* TimeSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA64090252A3C760001E6BF /* TimeSignature.swift */; };
+		CAA64096252A3CE60001E6BF /* Clef.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA64095252A3CE60001E6BF /* Clef.swift */; };
+		CAA6409B252A3D400001E6BF /* NoteRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA6409A252A3D400001E6BF /* NoteRest.swift */; };
+		CAA640A0252A3DA90001E6BF /* Accidental.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA6409F252A3DA90001E6BF /* Accidental.swift */; };
+		CAA640A8252A40890001E6BF /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA640A7252A40880001E6BF /* Bar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,12 @@
 		CA4C28FC25275C1C00A9FEBA /* SymbolPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolPosition.swift; sourceTree = "<group>"; };
 		CA4C28FD25275C1D00A9FEBA /* Second Training (No augmentation).mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Second Training (No augmentation).mlmodel"; sourceTree = "<group>"; };
 		CA4C290425275C3D00A9FEBA /* SymbolEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolEnum.swift; sourceTree = "<group>"; };
+		CAA6407E252A3B910001E6BF /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
+		CAA64090252A3C760001E6BF /* TimeSignature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSignature.swift; sourceTree = "<group>"; };
+		CAA64095252A3CE60001E6BF /* Clef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clef.swift; sourceTree = "<group>"; };
+		CAA6409A252A3D400001E6BF /* NoteRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRest.swift; sourceTree = "<group>"; };
+		CAA6409F252A3DA90001E6BF /* Accidental.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accidental.swift; sourceTree = "<group>"; };
+		CAA640A7252A40880001E6BF /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,7 @@
 		CA4C28C725275B0900A9FEBA /* Manuscript */ = {
 			isa = PBXGroup;
 			children = (
+				CAA640A7252A40880001E6BF /* Bar.swift */,
 				CA4C28C825275B0900A9FEBA /* ManuscriptApp.swift */,
 				CA4C28CA25275B0900A9FEBA /* ContentView.swift */,
 				CA4C28CC25275B0B00A9FEBA /* Assets.xcassets */,
@@ -118,6 +131,11 @@
 				CA4C290425275C3D00A9FEBA /* SymbolEnum.swift */,
 				CA4C28FC25275C1C00A9FEBA /* SymbolPosition.swift */,
 				CA4C28CE25275B0B00A9FEBA /* Preview Content */,
+				CAA6407E252A3B910001E6BF /* Staff.swift */,
+				CAA64090252A3C760001E6BF /* TimeSignature.swift */,
+				CAA64095252A3CE60001E6BF /* Clef.swift */,
+				CAA6409A252A3D400001E6BF /* NoteRest.swift */,
+				CAA6409F252A3DA90001E6BF /* Accidental.swift */,
 			);
 			path = Manuscript;
 			sourceTree = "<group>";
@@ -277,14 +295,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA6407F252A3B910001E6BF /* Staff.swift in Sources */,
 				CA4C28D225275B0B00A9FEBA /* Persistence.swift in Sources */,
 				CA4C290025275C1D00A9FEBA /* Second Training (No augmentation).mlmodel in Sources */,
+				CAA640A0252A3DA90001E6BF /* Accidental.swift in Sources */,
 				CA4C28FE25275C1D00A9FEBA /* Symbol.swift in Sources */,
+				CAA64091252A3C760001E6BF /* TimeSignature.swift in Sources */,
 				CA4C28D525275B0B00A9FEBA /* Manuscript.xcdatamodeld in Sources */,
 				CA4C28CB25275B0900A9FEBA /* ContentView.swift in Sources */,
 				CA4C28FF25275C1D00A9FEBA /* SymbolPosition.swift in Sources */,
+				CAA640A8252A40890001E6BF /* Bar.swift in Sources */,
 				CA4C290525275C3D00A9FEBA /* SymbolEnum.swift in Sources */,
 				CA4C28C925275B0900A9FEBA /* ManuscriptApp.swift in Sources */,
+				CAA64096252A3CE60001E6BF /* Clef.swift in Sources */,
+				CAA6409B252A3D400001E6BF /* NoteRest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
