@@ -11,12 +11,9 @@ struct ContentView: View {
     @State private var lineWidth: CGFloat = 3.0
     
     var body: some View {
-        VStack {
-//            let symbol = Symbol(symbolType: "4-4-Time", symbolPositionOnStaff: "a")
-//            let symbolImage = symbol.getSymbolImage()
-            
+        VStack {            
             let staff1 = ZStack{
-                Text("Hello!")
+                
                 DrawingPad(currentDrawing: $currentDrawing,
                            drawings: $drawings,
                            color: $color,
