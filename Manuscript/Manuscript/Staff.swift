@@ -28,4 +28,19 @@ class Staff{
 
         return deduplicated_clefs
     }
+    
+    func getTimeSigsToDisplay()->[TimeSignature]{
+        var deduplicated_timesigs = [TimeSignature]()
+        
+        if staffContents.count>=1{
+            deduplicated_timesigs.append((staffContents.first!.timeSignature)) //Because we already checked the size is >=1, we can unwrap.
+            for bar in self.staffContents{
+                if bar.timeSignature != deduplicated_timesigs.last{
+                    deduplicated_timesigs.append(bar.timeSignature)
+                }
+            }
+        }
+
+        return deduplicated_timesigs
+    }
 }
