@@ -5,8 +5,14 @@ struct Drawing {
 }
 struct ContentView: View {
     @Environment(\.colorScheme) var colorScheme
-    @State private var currentDrawing: Drawing = Drawing()
-    @State private var drawings: [Drawing] = [Drawing]()
+    @State private var staff1Drawing: Drawing = Drawing()
+    @State private var staff2Drawing: Drawing = Drawing()
+    @State private var staff3Drawing: Drawing = Drawing()
+
+    @State private var staff1DrawingList: [Drawing] = [Drawing]()
+    @State private var staff2DrawingList: [Drawing] = [Drawing]()
+    @State private var staff3DrawingList: [Drawing] = [Drawing]()
+
     @State private var color: Color = .primary
     @State private var lineWidth: CGFloat = 3.0
     
@@ -14,8 +20,8 @@ struct ContentView: View {
         VStack {            
             let staff1 = ZStack{
                 
-                DrawingPad(currentDrawing: $currentDrawing,
-                           drawings: $drawings,
+                DrawingPad(currentDrawing: $staff1Drawing,
+                           drawings: $staff1DrawingList,
                            color: $color,
                            lineWidth: $lineWidth)
                 VStack{
@@ -30,8 +36,8 @@ struct ContentView: View {
             }
            
             let staff2 = ZStack{
-                DrawingPad(currentDrawing: $currentDrawing,
-                           drawings: $drawings,
+                DrawingPad(currentDrawing: $staff2Drawing,
+                           drawings: $staff2DrawingList,
                            color: $color,
                            lineWidth: $lineWidth)
                 VStack{
@@ -45,8 +51,8 @@ struct ContentView: View {
                 }
             }
             let staff3 = ZStack{
-                DrawingPad(currentDrawing: $currentDrawing,
-                           drawings: $drawings,
+                DrawingPad(currentDrawing: $staff3Drawing,
+                           drawings: $staff3DrawingList,
                            color: $color,
                            lineWidth: $lineWidth)
                VStack{
