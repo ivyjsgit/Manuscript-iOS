@@ -119,23 +119,15 @@
 		CA4C28C725275B0900A9FEBA /* Manuscript */ = {
 			isa = PBXGroup;
 			children = (
-				CAA640A7252A40880001E6BF /* Bar.swift */,
+				CA7C343A252CCDA700602ED9 /* View */,
+				CA7C3439252CCD7800602ED9 /* Model */,
 				CA4C28C825275B0900A9FEBA /* ManuscriptApp.swift */,
-				CA4C28CA25275B0900A9FEBA /* ContentView.swift */,
 				CA4C28CC25275B0B00A9FEBA /* Assets.xcassets */,
 				CA4C28D125275B0B00A9FEBA /* Persistence.swift */,
 				CA4C28D625275B0B00A9FEBA /* Info.plist */,
 				CA4C28D325275B0B00A9FEBA /* Manuscript.xcdatamodeld */,
 				CA4C28FD25275C1D00A9FEBA /* Second Training (No augmentation).mlmodel */,
-				CA4C28FB25275C1C00A9FEBA /* Symbol.swift */,
-				CA4C290425275C3D00A9FEBA /* SymbolEnum.swift */,
-				CA4C28FC25275C1C00A9FEBA /* SymbolPosition.swift */,
 				CA4C28CE25275B0B00A9FEBA /* Preview Content */,
-				CAA6407E252A3B910001E6BF /* Staff.swift */,
-				CAA64090252A3C760001E6BF /* TimeSignature.swift */,
-				CAA64095252A3CE60001E6BF /* Clef.swift */,
-				CAA6409A252A3D400001E6BF /* NoteRest.swift */,
-				CAA6409F252A3DA90001E6BF /* Accidental.swift */,
 			);
 			path = Manuscript;
 			sourceTree = "<group>";
@@ -164,6 +156,30 @@
 				CA4C28EC25275B0B00A9FEBA /* Info.plist */,
 			);
 			path = ManuscriptUITests;
+			sourceTree = "<group>";
+		};
+		CA7C3439252CCD7800602ED9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CAA640A7252A40880001E6BF /* Bar.swift */,
+				CA4C290425275C3D00A9FEBA /* SymbolEnum.swift */,
+				CA4C28FB25275C1C00A9FEBA /* Symbol.swift */,
+				CAA6407E252A3B910001E6BF /* Staff.swift */,
+				CA4C28FC25275C1C00A9FEBA /* SymbolPosition.swift */,
+				CAA64090252A3C760001E6BF /* TimeSignature.swift */,
+				CAA64095252A3CE60001E6BF /* Clef.swift */,
+				CAA6409A252A3D400001E6BF /* NoteRest.swift */,
+				CAA6409F252A3DA90001E6BF /* Accidental.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA7C343A252CCDA700602ED9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA4C28CA25275B0900A9FEBA /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
