@@ -1,39 +1,18 @@
 import SwiftUI
 
-struct Drawing {
-    var points: [CGPoint] = [CGPoint]()
-}
+
 struct ContentView: View {
     @Environment(\.colorScheme) var colorScheme
-    @State private var staff1Drawing: Drawing = Drawing()
-    @State private var staff2Drawing: Drawing = Drawing()
-    @State private var staff3Drawing: Drawing = Drawing()
-
-    @State private var staff1DrawingList: [Drawing] = [Drawing]()
-    @State private var staff2DrawingList: [Drawing] = [Drawing]()
-    @State private var staff3DrawingList: [Drawing] = [Drawing]()
-
-    @State private var staff1Paths: [Path] = [Path]()
-    @State private var staff2Paths: [Path] = [Path]()
-    @State private var staff3Paths: [Path] = [Path]()
     
-    @State private var staff1PathHolder: Path = Path()
-    @State private var staff2PathHolder: Path = Path()
-    @State private var staff3PathHolder: Path = Path()
-
-    @State private var color: Color = .primary
-    @State private var lineWidth: CGFloat = 3.0
+    @State private var staff1DrawableStaff = DrawableStaff()
+    @State private var staff2DrawableStaff = DrawableStaff()
+    @State private var staff3DrawableStaff = DrawableStaff()
     
     var body: some View {
         VStack {            
             let staff1 = ZStack{
                 
-                DrawingPad(currentDrawing: $staff1Drawing,
-                           drawings: $staff1DrawingList,
-                           color: $color,
-                           lineWidth: $lineWidth,
-                           paths: $staff1Paths,
-                           pathHolder: $staff1PathHolder)
+                DrawingPad(drawableStaff: $staff1DrawableStaff)
                 VStack{
                     Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
                     StaffLine().padding(.top, 30.0)
@@ -46,12 +25,7 @@ struct ContentView: View {
             }
            
             let staff2 = ZStack{
-                DrawingPad(currentDrawing: $staff2Drawing,
-                           drawings: $staff2DrawingList,
-                           color: $color,
-                           lineWidth: $lineWidth,
-                           paths: $staff2Paths,
-                           pathHolder: $staff2PathHolder)
+                DrawingPad(drawableStaff: $staff2DrawableStaff)
                 VStack{
                     Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
                     StaffLine().padding(.top, 130.0)
@@ -63,12 +37,7 @@ struct ContentView: View {
                 }
             }
             let staff3 = ZStack{
-                DrawingPad(currentDrawing: $staff3Drawing,
-                           drawings: $staff3DrawingList,
-                           color: $color,
-                           lineWidth: $lineWidth,
-                           paths: $staff3Paths,
-                           pathHolder: $staff3PathHolder)
+                DrawingPad(drawableStaff: $staff3DrawableStaff)
                VStack{
                     Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
                     StaffLine().padding(.top,130.0)
@@ -115,25 +84,28 @@ struct ContentView_Previews: PreviewProvider {
 
 //https://stackoverflow.com/a/64177005/14082090
 struct DrawingPad: View {
-    @Binding var currentDrawing: Drawing
-    @Binding var drawings: [Drawing]
-    @Binding var color: Color
-    @Binding var lineWidth: CGFloat
-    @Binding var paths: [Path] // This saves the various notes
-    @Binding var pathHolder: Path
+    
+    @Binding var drawableStaff: DrawableStaff
+    
+//    @Binding var currentDrawing: Drawing
+//    @Binding var drawings: [Drawing]
+//    @Binding var color: Color
+//    @Binding var lineWidth: CGFloat
+//    @Binding var paths: [Path]
+//    @Binding var pathHolder: Path
     
     var body: some View {
         GeometryReader { geometry in
             Path { path in
-                for drawing in self.drawings {
+                for drawing in self.drawableStaff.drawingList {
                     self.add(drawing: drawing, toPath: &path)
                 }
-                self.add(drawing: self.currentDrawing, toPath: &path)
-                print(path)
-                self.pathHolder = path
-                print("PathHolder: \(self.pathHolder)")
+                self.add(drawing: self.drawableStaff.drawing, toPath: &path)
+                print("Current path: \(path)")
+                self.drawableStaff.pathHolder = path
+                print("PathHolder: \(self.$drawableStaff.pathHolder)")
             }
-            .stroke(self.color, lineWidth: self.lineWidth)
+            .stroke(self.drawableStaff.color, lineWidth: self.drawableStaff.lineWidth)
                 .background(Color(UIColor.systemBackground))
                 .gesture(
                     DragGesture(minimumDistance: 0.1)
@@ -141,13 +113,12 @@ struct DrawingPad: View {
                             let currentPoint = value.location
                             if currentPoint.y >= 0
                                 && currentPoint.y < geometry.size.height {
-                                self.currentDrawing.points.append(currentPoint)
+                                self.drawableStaff.drawing.points.append(currentPoint)
                             }
                         })
                         .onEnded({ (value) in
-                            self.drawings.append(self.currentDrawing)
-                            self.currentDrawing = Drawing()
-//                            paths.append(geometry as! Path)
+                            self.drawableStaff.drawingList.append(self.drawableStaff.drawing)
+                            self.drawableStaff.drawing = Drawing()
                         })
             )
                         
