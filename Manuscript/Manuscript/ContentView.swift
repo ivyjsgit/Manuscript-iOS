@@ -13,6 +13,14 @@ struct ContentView: View {
     @State private var staff2DrawingList: [Drawing] = [Drawing]()
     @State private var staff3DrawingList: [Drawing] = [Drawing]()
 
+    @State private var staff1Paths: [Path] = [Path]()
+    @State private var staff2Paths: [Path] = [Path]()
+    @State private var staff3Paths: [Path] = [Path]()
+    
+    @State private var staff1PathHolder: Path = Path()
+    @State private var staff2PathHolder: Path = Path()
+    @State private var staff3PathHolder: Path = Path()
+
     @State private var color: Color = .primary
     @State private var lineWidth: CGFloat = 3.0
     
@@ -23,7 +31,9 @@ struct ContentView: View {
                 DrawingPad(currentDrawing: $staff1Drawing,
                            drawings: $staff1DrawingList,
                            color: $color,
-                           lineWidth: $lineWidth)
+                           lineWidth: $lineWidth,
+                           paths: $staff1Paths,
+                           pathHolder: $staff1PathHolder)
                 VStack{
                     Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
                     StaffLine().padding(.top, 30.0)
@@ -39,7 +49,9 @@ struct ContentView: View {
                 DrawingPad(currentDrawing: $staff2Drawing,
                            drawings: $staff2DrawingList,
                            color: $color,
-                           lineWidth: $lineWidth)
+                           lineWidth: $lineWidth,
+                           paths: $staff2Paths,
+                           pathHolder: $staff2PathHolder)
                 VStack{
                     Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
                     StaffLine().padding(.top, 130.0)
@@ -54,7 +66,9 @@ struct ContentView: View {
                 DrawingPad(currentDrawing: $staff3Drawing,
                            drawings: $staff3DrawingList,
                            color: $color,
-                           lineWidth: $lineWidth)
+                           lineWidth: $lineWidth,
+                           paths: $staff3Paths,
+                           pathHolder: $staff3PathHolder)
                VStack{
                     Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
                     StaffLine().padding(.top,130.0)
@@ -94,6 +108,7 @@ struct StaffLine: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
             .previewDevice("iPad Pro (12.9-inch) (4th generation)")
     }
 }
@@ -104,6 +119,8 @@ struct DrawingPad: View {
     @Binding var drawings: [Drawing]
     @Binding var color: Color
     @Binding var lineWidth: CGFloat
+    @Binding var paths: [Path] // This saves the various notes
+    @Binding var pathHolder: Path
     
     var body: some View {
         GeometryReader { geometry in
@@ -112,6 +129,9 @@ struct DrawingPad: View {
                     self.add(drawing: drawing, toPath: &path)
                 }
                 self.add(drawing: self.currentDrawing, toPath: &path)
+                print(path)
+                self.pathHolder = path
+                print("PathHolder: \(self.pathHolder)")
             }
             .stroke(self.color, lineWidth: self.lineWidth)
                 .background(Color(UIColor.systemBackground))
@@ -127,8 +147,11 @@ struct DrawingPad: View {
                         .onEnded({ (value) in
                             self.drawings.append(self.currentDrawing)
                             self.currentDrawing = Drawing()
+//                            paths.append(geometry as! Path)
                         })
             )
+                        
+            
         }
         .frame(maxHeight: .infinity)
     }
