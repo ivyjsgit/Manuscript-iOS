@@ -7,12 +7,11 @@
 
 import Foundation
 import SwiftUI
-@dynamicMemberLookup
 struct DrawableStaff{
     var drawing: Drawing = Drawing()
     var drawingList: [Drawing] = [Drawing]()
     var paths: [Path] = [Path]()
-    var PathHolder = Path()
+    var pathHolder = Path()
     var color = Color.primary
     var lineWidth: CGFloat = 3.0
 }

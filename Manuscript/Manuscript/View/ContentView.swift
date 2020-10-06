@@ -97,13 +97,13 @@ struct DrawingPad: View {
     var body: some View {
         GeometryReader { geometry in
             Path { path in
-                for drawing in self.$drawableStaff.drawings {
-                    self.add(drawing: drawableStaff.drawing, toPath: &path)
+                for drawing in self.drawableStaff.drawingList {
+                    self.add(drawing: drawing, toPath: &path)
                 }
-                self.add(drawing: self.drawableStaff.currentDrawing, toPath: &path)
-                print(path)
+                self.add(drawing: self.drawableStaff.drawing, toPath: &path)
+                print("Current path: \(path)")
                 self.drawableStaff.pathHolder = path
-                print("PathHolder: \(self.drawableStaff.pathHolder)")
+                print("PathHolder: \(self.$drawableStaff.pathHolder)")
             }
             .stroke(self.drawableStaff.color, lineWidth: self.drawableStaff.lineWidth)
                 .background(Color(UIColor.systemBackground))
@@ -113,12 +113,12 @@ struct DrawingPad: View {
                             let currentPoint = value.location
                             if currentPoint.y >= 0
                                 && currentPoint.y < geometry.size.height {
-                                self.drawableStaff.currentDrawing.points.append(currentPoint)
+                                self.drawableStaff.drawing.points.append(currentPoint)
                             }
                         })
                         .onEnded({ (value) in
-                            self.drawableStaff.drawings.append(self.drawableStaff.currentDrawing)
-                            self.drawableStaff.currentDrawing = Drawing()
+                            self.drawableStaff.drawingList.append(self.drawableStaff.drawing)
+                            self.drawableStaff.drawing = Drawing()
                         })
             )
                         
