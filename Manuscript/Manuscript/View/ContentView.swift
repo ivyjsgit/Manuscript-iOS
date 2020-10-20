@@ -1,5 +1,8 @@
+import UIKit
+import CoreML
+import Vision
+import ImageIO
 import SwiftUI
-
 
 struct ContentView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -11,7 +14,8 @@ struct ContentView: View {
     var body: some View {
         VStack {            
             let staff1 = ZStack{
-                
+            
+
                 DrawingPad(drawableStaff: $staff1DrawableStaff)
                 VStack{
                     Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
@@ -48,9 +52,12 @@ struct ContentView: View {
                     Rectangle().frame(height: 40.0).foregroundColor(getBackgroundColor())
                 }
             }
-            staff1.gesture(DragGesture().onChanged({value in print("Hello from staff1 \(value.location)")}))
-            staff2.gesture(DragGesture().onChanged({value in print("Hello from staff2 \(value.location)")}))
-            staff3.gesture(DragGesture().onChanged({value in print("Hello from staff3 \(value.location)")}))
+            staff1
+            staff2
+            staff3
+//            staff1.gesture(DragGesture().onChanged({value in print("Hello from staff1 \(value.location)")}))
+//            staff2.gesture(DragGesture().onChanged({value in print("Hello from staff2 \(value.location)")}))
+//            staff3.gesture(DragGesture().onChanged({value in print("Hello from staff3 \(value.location)")}))
         }
     }
     
@@ -87,13 +94,6 @@ struct DrawingPad: View {
     
     @Binding var drawableStaff: DrawableStaff
     
-//    @Binding var currentDrawing: Drawing
-//    @Binding var drawings: [Drawing]
-//    @Binding var color: Color
-//    @Binding var lineWidth: CGFloat
-//    @Binding var paths: [Path]
-//    @Binding var pathHolder: Path
-    
     var body: some View {
         GeometryReader { geometry in
             Path { path in
@@ -101,9 +101,7 @@ struct DrawingPad: View {
                     self.add(drawing: drawing, toPath: &path)
                 }
                 self.add(drawing: self.drawableStaff.drawing, toPath: &path)
-                print("Current path: \(path)")
-                self.drawableStaff.pathHolder = path
-                print("PathHolder: \(self.$drawableStaff.pathHolder)")
+//                print("Current path: \(path)")
             }
             .stroke(self.drawableStaff.color, lineWidth: self.drawableStaff.lineWidth)
                 .background(Color(UIColor.systemBackground))
@@ -117,12 +115,13 @@ struct DrawingPad: View {
                             }
                         })
                         .onEnded({ (value) in
+                            let classifier = ImageClassifier()
+                            let imageAsUI = UIImage(named: "test-drawings/quarter-note")
+                           print(classifier.classify(image: classifier.convertUIImageToCGImage(image: imageAsUI!)))
                             self.drawableStaff.drawingList.append(self.drawableStaff.drawing)
                             self.drawableStaff.drawing = Drawing()
                         })
             )
-                        
-            
         }
         .frame(maxHeight: .infinity)
     }
