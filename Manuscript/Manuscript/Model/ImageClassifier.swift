@@ -19,18 +19,20 @@ struct ImageClassifier{
         let output = try? self.classifier.prediction(image: pixelBuffer)
         return output?.classLabel
     }
-    func loadImage(name: String) -> CIImage?{
-        guard let inputImage = UIImage(named: name) else{ return nil }
-        let beginImage = CIImage(image: inputImage)!
-        return beginImage
+    func classifyUIImage(image: UIImage)-> String?{
+        guard let imageAsUIImage:CGImage = convertUIImageToCGImage(image: image) else{
+            return nil
+        }
+        return classify(image: imageAsUIImage)
     }
-    func convertUIImageToCGImage(image: UIImage) -> CGImage! {
+    func classifyPath(path:Path) -> String?{
+        //???
+        return nil
+    }
+    func convertUIImageToCGImage(image: UIImage) -> CGImage? {
         let inputImage = CIImage(image: image)!
         let context = CIContext(options: nil)
-        if context != nil {
-            return context.createCGImage(inputImage, from: inputImage.extent)
-        }
-        return nil
+        return context.createCGImage(inputImage, from: inputImage.extent)
     }
 }
 

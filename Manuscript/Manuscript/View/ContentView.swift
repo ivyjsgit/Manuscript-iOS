@@ -117,7 +117,7 @@ struct DrawingPad: View {
                         .onEnded({ (value) in
                             let classifier = ImageClassifier()
                             let imageAsUI = UIImage(named: "test-drawings/quarter-note")
-                           print(classifier.classify(image: classifier.convertUIImageToCGImage(image: imageAsUI!)))
+                            print(classifier.classifyUIImage(image: imageAsUI!)!)
                             self.drawableStaff.drawingList.append(self.drawableStaff.drawing)
                             self.drawableStaff.drawing = Drawing()
                         })
