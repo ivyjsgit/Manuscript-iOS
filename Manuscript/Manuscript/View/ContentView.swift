@@ -101,7 +101,6 @@ struct DrawingPad: View {
                     self.add(drawing: drawing, toPath: &path)
                 }
                 self.add(drawing: self.drawableStaff.drawing, toPath: &path)
-//                print("Current path: \(path)")
             }
             .stroke(self.drawableStaff.color, lineWidth: self.drawableStaff.lineWidth)
                 .background(Color(UIColor.systemBackground))
@@ -117,7 +116,9 @@ struct DrawingPad: View {
                         .onEnded({ (value) in
                             let classifier = ImageClassifier()
                             let imageAsUI = UIImage(named: "test-drawings/quarter-note")
-                            print(classifier.classifyUIImage(image: imageAsUI!)!)
+//                            print(classifier.classifyUIImage(image: imageAsUI!)!)
+//                            print("Current drawing: \(self.drawableStaff.drawing)")
+                            print("Currently predicting: \(classifier.classifyPath(path: self.drawableStaff.drawing))")
                             self.drawableStaff.drawingList.append(self.drawableStaff.drawing)
                             self.drawableStaff.drawing = Drawing()
                         })
