@@ -35,7 +35,8 @@ struct ImageClassifier{
         //Profit
         
         //For some reason, CGImages are recognized as half of their size???
-        let drawSize = CGSize(width: 150, height: 150)
+        let viewportSize=150
+        let drawSize = CGSize(width: viewportSize, height: viewportSize)
         
         let imageRenderer = UIGraphicsImageRenderer(size: drawSize)
         let symbolAsCIImage = imageRenderer.image { ctx in
@@ -47,15 +48,27 @@ struct ImageClassifier{
             
             var points = path.points
             //Do math to center points here
+
             
-            let symbolWidth = abs(findMaxX(cgpoints: points)) - abs(findMinX(cgpoints: points))
-            let symbolHeight = abs(findMaxY(cgpoints: points)) - abs(findMinX(cgpoints: points))
+            //Get the height and width of the original symbol
+            let symbolWidth = abs(findMaxX(cgpoints: points) - findMinX(cgpoints: points))
+            let symbolHeight = abs(findMaxY(cgpoints: points) - findMinY(cgpoints: points))
+            //Get the amount we should scale the symbol by
+            let xScale = symbolWidth/Float(viewportSize)
+            let yScale = symbolHeight/Float(viewportSize)
+            //Scale the symbol to fit in the viewport
+            var new_points = points.map{CGPoint(x: ($0.x)/CGFloat(xScale),y: ($0.y)/CGFloat(yScale))}
+            //Scoot it into view
+            //???
+
+            
+
             
             print("Height: \(symbolHeight) Width: \(symbolWidth)")
 
-            let first = points.removeFirst()
+            let first = new_points.removeFirst()
             ctx.cgContext.move(to: first)
-            ctx.cgContext.addLines(between: points)
+            ctx.cgContext.addLines(between: new_points)
             ctx.cgContext.drawPath(using: .fillStroke)
 
 
@@ -74,23 +87,36 @@ struct ImageClassifier{
         let xs:[Float] = cgpoints.map ({(point:CGPoint) -> Float in
             return Float(point.x
 )        })
-        return xs.min()!
-
+        if xs.min() == nil {
+            return 0.0
+        }else{
+            return xs.min()!
+        }
     }
     
     func findMaxX(cgpoints: [CGPoint]) -> Float{
         let xs:[Float] = cgpoints.map ({(point:CGPoint) -> Float in
             return Float(point.x
 )        })
-        return xs.max()!
-
+        
+        if xs.max() == nil {
+            return 0.0
+        }else{
+            return xs.max()!
+        }
+        
     }
     
     func findMinY(cgpoints: [CGPoint]) -> Float{
         let ys:[Float] = cgpoints.map ({(point:CGPoint) -> Float in
             return Float(point.y
 )        })
-        return ys.min()!
+        if ys.min() == nil {
+            return 0.0
+        }else{
+            return ys.min()!
+        }
+        
 
     }
     
@@ -98,7 +124,11 @@ struct ImageClassifier{
         let ys:[Float] = cgpoints.map ({(point:CGPoint) -> Float in
             return Float(point.y
 )        })
-        return ys.min()!
+        if ys.max() == nil {
+            return 0.0
+        }else{
+            return ys.max()!
+        }
 
     }
     
