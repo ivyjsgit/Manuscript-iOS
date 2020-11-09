@@ -35,8 +35,14 @@ struct ImageClassifier{
         //Profit
         
         //For some reason, CGImages are recognized as half of their size???
-        let viewportSize=150
-        let padding=60
+        let viewportSize=300
+        
+        //Tweak these until the image is roughly the correct size and centred
+        let xShrinkFactor: Float  = 10
+        let yShrinkFactor: Float = 8
+        let paddingX=100
+        let paddingY=100
+
         let drawSize = CGSize(width: viewportSize, height: viewportSize)
         
         let imageRenderer = UIGraphicsImageRenderer(size: drawSize)
@@ -47,7 +53,7 @@ struct ImageClassifier{
             ctx.cgContext.setLineWidth(2)
 
             
-            var points = path.points
+            let points = path.points
             //Do math to center points here
 
             
@@ -55,14 +61,14 @@ struct ImageClassifier{
             let symbolWidth = abs(findMaxX(cgpoints: points) - findMinX(cgpoints: points))
             let symbolHeight = abs(findMaxY(cgpoints: points) - findMinY(cgpoints: points))
             //Get the amount we should scale the symbol by
-            let xScale = symbolWidth/Float(viewportSize-padding)
-            let yScale = symbolHeight/Float(viewportSize-padding)
+            let xScale = symbolWidth/Float(viewportSize) * xShrinkFactor
+            let yScale = symbolHeight/Float(viewportSize) * yShrinkFactor
             
             //Scale the image
             let scaledPoints = points.map{CGPoint(x: ($0.x)/CGFloat(xScale),y: ($0.y)/CGFloat(yScale))}
             
-            //Scoot it into the viewport
-            var scootedPoints = scaledPoints.map{CGPoint(x: ($0.x)-CGFloat(findMinX(cgpoints: scaledPoints)), y: ($0.y)-CGFloat(findMinY(cgpoints: scaledPoints)))}
+            //Scoot it into the viewport\
+            var scootedPoints = scaledPoints.map{CGPoint(x: ($0.x)-CGFloat(findMinX(cgpoints: scaledPoints)-Float(paddingX)), y: ($0.y)-CGFloat(findMinY(cgpoints: scaledPoints)-Float(paddingY)))}
 
             
 
