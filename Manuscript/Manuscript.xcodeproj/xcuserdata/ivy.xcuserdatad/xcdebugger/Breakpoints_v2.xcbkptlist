@@ -23,81 +23,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "01AF731C-FCFD-4305-A377-B2B78E855EB2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Manuscript/Model/ImageClassifier.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "classifyPath(path:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7C30F9D8-047F-488D-8782-08585CBC3AD6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Manuscript/Model/ImageClassifier.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "classifyPath(path:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "458147AA-EF96-4B37-81F3-3F6A199A0C37"
+            uuid = "87743AA4-E4F4-4E7F-8D8A-79AD9E6B42B3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Manuscript/Model/ImageClassifier.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "classifyPath(path:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "458147AA-EF96-4B37-81F3-3F6A199A0C37 - 709f0a6bd332a24"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.UIGraphicsImageRendererContext) -&gt; () in Manuscript.ImageClassifier.classifyPath(path: Manuscript.Drawing) -&gt; Swift.Optional&lt;Swift.String&gt;"
-                  moduleName = "Manuscript"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ivy/Desktop/Senior_Seminar/manuscript/iOS/Manuscript-iOS/Manuscript/Manuscript/Model/ImageClassifier.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "1474">
-               </Location>
-               <Location
-                  uuid = "458147AA-EF96-4B37-81F3-3F6A199A0C37 - 885bf3d87ab29069"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.CGPoint) -&gt; __C.CGPoint in closure #1 (__C.UIGraphicsImageRendererContext) -&gt; () in Manuscript.ImageClassifier.classifyPath(path: Manuscript.Drawing) -&gt; Swift.Optional&lt;Swift.String&gt;"
-                  moduleName = "Manuscript"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ivy/Desktop/Senior_Seminar/manuscript/iOS/Manuscript-iOS/Manuscript/Manuscript/Model/ImageClassifier.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "54">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

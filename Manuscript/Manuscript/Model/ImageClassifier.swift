@@ -36,6 +36,7 @@ struct ImageClassifier{
         
         //For some reason, CGImages are recognized as half of their size???
         let viewportSize=150
+        let padding=60
         let drawSize = CGSize(width: viewportSize, height: viewportSize)
         
         let imageRenderer = UIGraphicsImageRenderer(size: drawSize)
@@ -54,27 +55,28 @@ struct ImageClassifier{
             let symbolWidth = abs(findMaxX(cgpoints: points) - findMinX(cgpoints: points))
             let symbolHeight = abs(findMaxY(cgpoints: points) - findMinY(cgpoints: points))
             //Get the amount we should scale the symbol by
-            let xScale = symbolWidth/Float(viewportSize)
-            let yScale = symbolHeight/Float(viewportSize)
-            //Scale the symbol to fit in the viewport
-            var new_points = points.map{CGPoint(x: ($0.x)/CGFloat(xScale),y: ($0.y)/CGFloat(yScale))}
-            //Scoot it into view
-            //???
+            let xScale = symbolWidth/Float(viewportSize-padding)
+            let yScale = symbolHeight/Float(viewportSize-padding)
+            
+            //Scale the image
+            let scaledPoints = points.map{CGPoint(x: ($0.x)/CGFloat(xScale),y: ($0.y)/CGFloat(yScale))}
+            
+            //Scoot it into the viewport
+            var scootedPoints = scaledPoints.map{CGPoint(x: ($0.x)-CGFloat(findMinX(cgpoints: scaledPoints)), y: ($0.y)-CGFloat(findMinY(cgpoints: scaledPoints)))}
 
             
 
             
             print("Height: \(symbolHeight) Width: \(symbolWidth)")
 
-            let first = new_points.removeFirst()
+            let first = scootedPoints.removeFirst()
             ctx.cgContext.move(to: first)
-            ctx.cgContext.addLines(between: new_points)
+            ctx.cgContext.addLines(between: scootedPoints)
             ctx.cgContext.drawPath(using: .fillStroke)
 
 
         }
         
-        //???
         return classify(image: symbolAsCIImage.cgImage!)
     }
     func convertUIImageToCGImage(image: UIImage) -> CGImage? {
