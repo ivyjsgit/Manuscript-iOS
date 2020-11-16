@@ -118,8 +118,12 @@ struct DrawingPad: View {
                             let imageAsUI = UIImage(named: "test-drawings/quarter-note")
 //                            print(classifier.classifyUIImage(image: imageAsUI!)!)
 //                            print("Current drawing: \(self.drawableStaff.drawing)")
-                            print("Currently predicting: \(classifier.classifyPath(path: self.drawableStaff.drawing))")
+                            let predictedSymbol = classifier.classifyPath(path:self.drawableStaff.drawing)
+                            print("Currently predicting: \(String(describing: predictedSymbol.symbolType))")
+//                            print("Image path: \(predictedSymbol.getSymbolImage())")
+                            //vvv In order to have notes disappear, comment out this line vvvv
                             self.drawableStaff.drawingList.append(self.drawableStaff.drawing)
+                            
                             self.drawableStaff.drawing = Drawing()
                         })
             )

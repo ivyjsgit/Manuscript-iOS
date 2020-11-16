@@ -26,23 +26,14 @@ struct ImageClassifier{
         return classify(image: imageAsUIImage)
     }
     //https://www.hackingwithswift.com/example-code/core-graphics/how-to-draw-lines-in-core-graphics-moveto-and-addlineto
-    func classifyPath(path:Drawing) -> String?{
-        //Possibly load a white CIImage of 300x300
-        //Use min and max functions and math to adjust the points to look more centred.
-        //Do the mapping onto the CIImage using CIImage tools to map the symbol onto it
-        //Save as pixelBuffer
-        //???
-        //Profit
-        
+    func classifyPath(path:Drawing) -> Symbol{
+
         //For some reason, CGImages are recognized as half of their size???
         let viewportSize=300
+        let padding:CGFloat = CGFloat(0.0)
         
         //Tweak these until the image is roughly the correct size and centred
-        let xShrinkFactor: Float  = 10
-        let yShrinkFactor: Float = 8
-        let paddingX=100
-        let paddingY=100
-
+        let shrinkFactor: Float = 10
         let drawSize = CGSize(width: viewportSize, height: viewportSize)
         
         let imageRenderer = UIGraphicsImageRenderer(size: drawSize)
@@ -50,40 +41,39 @@ struct ImageClassifier{
             ctx.cgContext.setFillColor(UIColor.white.cgColor)
             ctx.cgContext.fill(CGRect(x: 0, y: 0, width: drawSize.width, height: drawSize.height))
             ctx.cgContext.setStrokeColor(UIColor.black.cgColor)
-            ctx.cgContext.setLineWidth(2)
+            ctx.cgContext.setLineWidth(3)
 
             
             let points = path.points
-            //Do math to center points here
 
-            
             //Get the height and width of the original symbol
             let symbolWidth = abs(findMaxX(cgpoints: points) - findMinX(cgpoints: points))
             let symbolHeight = abs(findMaxY(cgpoints: points) - findMinY(cgpoints: points))
+            
+            let centeredPoints = movePointsToCorner(points: points)
+            
             //Get the amount we should scale the symbol by
-            let xScale = symbolWidth/Float(viewportSize) * xShrinkFactor
-            let yScale = symbolHeight/Float(viewportSize) * yShrinkFactor
+            let scale = symbolWidth/Float(viewportSize) * shrinkFactor
             
             //Scale the image
-            let scaledPoints = points.map{CGPoint(x: ($0.x)/CGFloat(xScale),y: ($0.y)/CGFloat(yScale))}
+            let scaledPoints = centeredPoints.map{CGPoint(x: ($0.x)/CGFloat(scale),y: ($0.y)/CGFloat(scale))}
             
-            //Scoot it into the viewport\
-            var scootedPoints = scaledPoints.map{CGPoint(x: ($0.x)-CGFloat(findMinX(cgpoints: scaledPoints)-Float(paddingX)), y: ($0.y)-CGFloat(findMinY(cgpoints: scaledPoints)-Float(paddingY)))}
-
+     
+            var scootedPoints = scaledPoints.map{CGPoint(x: ($0.x)-CGFloat(findMinX(cgpoints: scaledPoints))+padding, y: ($0.y)-CGFloat(findMinY(cgpoints: scaledPoints))+padding)}
             
 
             
             print("Height: \(symbolHeight) Width: \(symbolWidth)")
+            print("Mins: \(findMinX(cgpoints: scaledPoints)) \(findMinY(cgpoints: scaledPoints))")
 
             let first = scootedPoints.removeFirst()
             ctx.cgContext.move(to: first)
             ctx.cgContext.addLines(between: scootedPoints)
             ctx.cgContext.drawPath(using: .fillStroke)
 
-
         }
         
-        return classify(image: symbolAsCIImage.cgImage!)
+        return Symbol(symbolType: (classify(image: symbolAsCIImage.cgImage!)!))
     }
     func convertUIImageToCGImage(image: UIImage) -> CGImage? {
         let inputImage = CIImage(image: image)!
@@ -139,6 +129,25 @@ struct ImageClassifier{
         }
 
     }
-    
+    func movePointsToCorner(points: [CGPoint]) -> [CGPoint]{
+        let minX = findMinX(cgpoints: points)
+        let minY = findMinY(cgpoints: points)
+        let maxX = findMaxX(cgpoints: points)
+        let maxY = findMaxY(cgpoints: points)
+        
+        let width = maxX - minX
+        let height = maxY - minY
+        
+        //Initialize scootedPoints
+        var centeredPoints:[CGPoint] = []
+        if (width<height){
+            let amountToScoot:CGFloat = CGFloat(((height-width)/2.0))
+            centeredPoints = points.map{CGPoint(x: ($0.x) + amountToScoot, y: ($0.y))}
+        }else{
+            let amountToScoot:CGFloat = CGFloat(((width - height)/2.0))
+            centeredPoints = points.map{CGPoint(x: ($0.x), y: ($0.y) + amountToScoot)}
+        }
+        return centeredPoints
+    }
 }
 

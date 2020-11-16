@@ -10,11 +10,9 @@ import SwiftUI
 
 class Symbol{
     var symbolType: SymbolEnum?
-    var symbolPositionOnStaff: SymbolPosition?;
     
-    init(symbolType: String, symbolPositionOnStaff: String){
+    init(symbolType: String){
         self.symbolType = stringToEnum(value: symbolType);
-        self.symbolPositionOnStaff=SymbolPosition(rawValue: symbolPositionOnStaff);
     }
     
     func stringToEnum(value: String)-> SymbolEnum?{
