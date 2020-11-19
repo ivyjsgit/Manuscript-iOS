@@ -41,7 +41,7 @@ struct ImageClassifier{
             ctx.cgContext.setFillColor(UIColor.white.cgColor)
             ctx.cgContext.fill(CGRect(x: 0, y: 0, width: drawSize.width, height: drawSize.height))
             ctx.cgContext.setStrokeColor(UIColor.black.cgColor)
-            ctx.cgContext.setLineWidth(3)
+            ctx.cgContext.setLineWidth(2)
 
             
             let points = path.points
@@ -66,11 +66,12 @@ struct ImageClassifier{
             print("Height: \(symbolHeight) Width: \(symbolWidth)")
             print("Mins: \(findMinX(cgpoints: scaledPoints)) \(findMinY(cgpoints: scaledPoints))")
 
-            let first = scootedPoints.removeFirst()
-            ctx.cgContext.move(to: first)
-            ctx.cgContext.addLines(between: scootedPoints)
-            ctx.cgContext.drawPath(using: .fillStroke)
-
+            if scootedPoints.count>1{
+                let first = scootedPoints.removeFirst()
+                ctx.cgContext.move(to: first)
+                ctx.cgContext.addLines(between: scootedPoints)
+                ctx.cgContext.drawPath(using: .fillStroke)
+            }
         }
         
         return Symbol(symbolType: (classify(image: symbolAsCIImage.cgImage!)!))

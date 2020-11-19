@@ -17,12 +17,12 @@
 		CA4C28EB25275B0B00A9FEBA /* ManuscriptUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C28EA25275B0B00A9FEBA /* ManuscriptUITests.swift */; };
 		CA4C28FE25275C1D00A9FEBA /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C28FB25275C1C00A9FEBA /* Symbol.swift */; };
 		CA4C28FF25275C1D00A9FEBA /* SymbolPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C28FC25275C1C00A9FEBA /* SymbolPosition.swift */; };
-		CA4C290025275C1D00A9FEBA /* SymbolClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CA4C28FD25275C1D00A9FEBA /* SymbolClassifier.mlmodel */; };
 		CA4C290525275C3D00A9FEBA /* SymbolEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4C290425275C3D00A9FEBA /* SymbolEnum.swift */; };
 		CA6BEFC6253F6CD7001CEBF1 /* CGImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6BEFC5253F6CD7001CEBF1 /* CGImage+CVPixelBuffer.swift */; };
 		CA7C343F252CCEB500602ED9 /* DrawableStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7C343E252CCEB500602ED9 /* DrawableStaff.swift */; };
 		CA7C3444252CCF6400602ED9 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7C3443252CCF6400602ED9 /* Drawing.swift */; };
 		CA7C346B252D0FD400602ED9 /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7C346A252D0FD400602ED9 /* ImageClassifier.swift */; };
+		CA7E2D9625643A5F00DC79A7 /* SymbolClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CA7E2D9525643A5F00DC79A7 /* SymbolClassifier.mlmodel */; };
 		CAA6407F252A3B910001E6BF /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA6407E252A3B910001E6BF /* Staff.swift */; };
 		CAA64091252A3C760001E6BF /* TimeSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA64090252A3C760001E6BF /* TimeSignature.swift */; };
 		CAA64096252A3CE60001E6BF /* Clef.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA64095252A3CE60001E6BF /* Clef.swift */; };
@@ -65,12 +65,12 @@
 		CA4C28EC25275B0B00A9FEBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA4C28FB25275C1C00A9FEBA /* Symbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		CA4C28FC25275C1C00A9FEBA /* SymbolPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolPosition.swift; sourceTree = "<group>"; };
-		CA4C28FD25275C1D00A9FEBA /* SymbolClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SymbolClassifier.mlmodel; sourceTree = "<group>"; };
 		CA4C290425275C3D00A9FEBA /* SymbolEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolEnum.swift; sourceTree = "<group>"; };
 		CA6BEFC5253F6CD7001CEBF1 /* CGImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
 		CA7C343E252CCEB500602ED9 /* DrawableStaff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawableStaff.swift; sourceTree = "<group>"; };
 		CA7C3443252CCF6400602ED9 /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
 		CA7C346A252D0FD400602ED9 /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
+		CA7E2D9525643A5F00DC79A7 /* SymbolClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SymbolClassifier.mlmodel; sourceTree = "<group>"; };
 		CAA6407E252A3B910001E6BF /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
 		CAA64090252A3C760001E6BF /* TimeSignature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSignature.swift; sourceTree = "<group>"; };
 		CAA64095252A3CE60001E6BF /* Clef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clef.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 				CA4C28D125275B0B00A9FEBA /* Persistence.swift */,
 				CA4C28D625275B0B00A9FEBA /* Info.plist */,
 				CA4C28D325275B0B00A9FEBA /* Manuscript.xcdatamodeld */,
-				CA4C28FD25275C1D00A9FEBA /* SymbolClassifier.mlmodel */,
+				CA7E2D9525643A5F00DC79A7 /* SymbolClassifier.mlmodel */,
 				CA4C28CE25275B0B00A9FEBA /* Preview Content */,
 			);
 			path = Manuscript;
@@ -335,7 +335,6 @@
 				CAA6407F252A3B910001E6BF /* Staff.swift in Sources */,
 				CA4C28D225275B0B00A9FEBA /* Persistence.swift in Sources */,
 				CA6BEFC6253F6CD7001CEBF1 /* CGImage+CVPixelBuffer.swift in Sources */,
-				CA4C290025275C1D00A9FEBA /* SymbolClassifier.mlmodel in Sources */,
 				CA7C3444252CCF6400602ED9 /* Drawing.swift in Sources */,
 				CAA640A0252A3DA90001E6BF /* Accidental.swift in Sources */,
 				CA4C28FE25275C1D00A9FEBA /* Symbol.swift in Sources */,
@@ -344,6 +343,7 @@
 				CA4C28CB25275B0900A9FEBA /* ContentView.swift in Sources */,
 				CA4C28FF25275C1D00A9FEBA /* SymbolPosition.swift in Sources */,
 				CAA640A8252A40890001E6BF /* Bar.swift in Sources */,
+				CA7E2D9625643A5F00DC79A7 /* SymbolClassifier.mlmodel in Sources */,
 				CA4C290525275C3D00A9FEBA /* SymbolEnum.swift in Sources */,
 				CA4C28C925275B0900A9FEBA /* ManuscriptApp.swift in Sources */,
 				CA7C346B252D0FD400602ED9 /* ImageClassifier.swift in Sources */,
